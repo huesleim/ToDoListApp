@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale:1.0" />
+    </head>
+    <body>
+        <header>
+            <h1>To-Do List</h1>
+            <button id="newTodo"> NEW </button>
+            <button id="save"> SAVE </button>
+            <button id="load"> LOAD </button>
+        </header>
+        <div id="content">
+            <div id="todoList">
+            </div>
+            <div class="modal-backdrop">
+                <div class="modal"> 
+                    <h2> NEW TO-DO </h2>
+                    <form id="todo-form">
+                        <label for="name"> Name: </label>
+                        <input type="text" id="name" name="name" required> 
+
+                        <label for="due"> Due Date: </label>
+                        <input type="date" id="due" name="due"> 
+
+                        <label for="description"> Description: </label>
+                        <input type="text" id="description" name="description" > 
+                        <div class="buttonContainer">
+                            <button type="submit" id="submitTodo"> ADD </button>
+                            <button id="cancelTodo"> CANCEL </button>
+                        </div> 
+                    </form>
+            
+                </div> 
+            </div>
+        </div>
+        <footer>
+            <p>Made by Hueslei Miranda for The Odin Project</p>
+        </footer>
+    </body> 
+</html>

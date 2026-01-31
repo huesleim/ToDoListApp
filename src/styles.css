@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+button {
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+header {
+    display: flex;
+    flex: 0 0 auto;
+    padding: 0px 0px 0px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    gap: 10px;
+    align-items: center;
+}
+header button {
+    background-color: teal;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    line-height: 1;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#todoList {
+    display: grid;
+    height: 80vh;
+    gap: 10px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: column;
+}
+.todoItem {
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+}
+.todoButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+}
+.todoButtons button {
+    background-color: #e27f3d;
+}
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #9ca3af;
+    margin-right: auto;
+}
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    width: 25dvw;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid grey;
+    padding: 15px;
+}
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.modal-backdrop:has(.modal.active) {
+    opacity: 1;
+    pointer-events: auto;
+}
+.active {
+    display: flex;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    flex: 0 0 auto;
+    margin-top: auto;
+    align-self: center;
+}
+
